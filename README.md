@@ -39,6 +39,8 @@ Ursprünglicher Code
 ![image](https://github.com/Elbish-03/BhusalElbishLB-183/assets/78097812/5bdbc4b4-5939-48ec-912b-fc6b864ca0d9)
 
 Verbesserter Code: 
+
+
 ![image](https://github.com/Elbish-03/BhusalElbishLB-183/assets/78097812/ad58ac9a-e75b-4a22-b3e8-2f461bb37b84)
 
 #### Nachweis zur Zielerreichung
