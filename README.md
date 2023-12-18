@@ -16,8 +16,8 @@ Um das Handlungsziel der Erkennung von Sicherheitslücken und deren Ursachen zu 
 
 Die folgenden Quellen repräsentieren einen Ausschnitt meiner Forschung:
 
-(https://www.akamai.com/de/our-thinking/the-state-of-the-internet/global-state-of-the-internet-security-ddos-attack-reports)
-(https://www.4net.ch/cyber-bedrohungen-h1-2021-sicherheitsbericht/)
+- (https://www.akamai.com/de/our-thinking/the-state-of-the-internet/global-state-of-the-internet-security-ddos-attack-reports) 
+- (https://www.4net.ch/cyber-bedrohungen-h1-2021-sicherheitsbericht/)
 
 Diese Artikel bieten detaillierte Einblicke in aktuelle Sicherheitsbedrohungen, insbesondere im Hinblick auf DDoS-Angriffe und allgemeine Cyberbedrohungen. Durch das Studium dieser Quellen habe ich meine Fähigkeiten zur Identifizierung von Sicherheitslücken geschärft und ein fundiertes Verständnis für deren Ursachen entwickelt.
 
@@ -39,7 +39,6 @@ Ursprünglicher Code
 ![image](https://github.com/Elbish-03/BhusalElbishLB-183/assets/78097812/5bdbc4b4-5939-48ec-912b-fc6b864ca0d9)
 
 Verbesserter Code: 
-
 ![image](https://github.com/Elbish-03/BhusalElbishLB-183/assets/78097812/ad58ac9a-e75b-4a22-b3e8-2f461bb37b84)
 
 #### Nachweis zur Zielerreichung
@@ -56,10 +55,24 @@ Verbesserungen:
 * Es wurde eine Überprüfung auf ein gültiges Anti-CSRF-Token hinzugefügt.
 * Rate-Limiting wurde eingeführt, um zu viele Anfragen zu verhindern.
 
+#### Rückblick
+
+Der überarbeitete Code im Artefakt zeigt Verbesserungen bei der Eingabevalidierung im Login-Controller. Es wurden Sicherheitslücken behoben, wie die Anwendung von MD5 und das Hinzufügen von CSRF-Token-Validierung und Rate Limiting. Dennoch gibt es Raum für weitergehende Verbesserungen, insbesondere bei der Auswahl sicherer Hashing-Algorithmen und umfassenderer Validierung.
+
+![image](https://github.com/Elbish-03/BhusalElbishLB-183/assets/78097812/afd3e308-690c-4b63-9ef8-5156b4ca5b35)
+
+Für zusätzliche Sicherheit besteht die Möglichkeit, anstelle von MD5 einen sichereren Hashing-Algorithmus wie bcrypt zu verwenden. Dieser Ansatz ermöglicht die Verwendung von zufällig generierten Salts und einer anpassbaren Kostenfunktion, um die Passwortintegrität zu schützen und Brute-Force-Angriffe zu erschweren.
 
 
+## Handlungsziel 3
 
+#### Artefakt
 
+#### Nachweis zur Zielerreichung
+
+#### Erklärung
+
+#### Rückblick
 
 
 
