@@ -96,10 +96,77 @@ Die Integration differenzierter Autorisierung und genauer Kontrolle über Benutz
 
 #### Nachweis zur Zielerreichung
 
+Ich weise nach, dass ich das Handlungsziel 4 erreicht habe, indem ich eine sichere Implementierung in meiner Sicherheitsarchitektur vorgenommen habe. Das Artefakt, das diese Umsetzung zeigt, ist der Codeabschnitt einer SecurityImplementation-Klasse
+
+#### Erklärung
+
+Die SecurityImplementation-Klasse stellt sicherheitsrelevante Mechanismen für eine Anwendung dar. Hier sind die Schlüsselelemente und wie sie funktionieren:
+
+**IsValidInput-Methode:**
+Überprüft, ob die Benutzereingabe gültig ist, indem sie sicherstellt, dass sie nicht null oder leer ist.
+
+**StoreSecurePassword-Methode:**
+Speichert ein sicheres Passwort in einer Datenbank oder einem sicheren Speicher und protokolliert das Ereignis.
+
+**LogSecurityIssue- und LogSecurityEvent-Methoden:**
+Protokollieren Sicherheitsprobleme und -ereignisse in der Konsole.
+
+**SecureImplementation-Methode:**
+Koordiniert sicherheitsrelevante Aktionen, indem sie die Gültigkeit der Benutzereingabe überprüft und bei Erfolg das sichere Passwort speichert. Andernfalls wird ein Sicherheitsproblem protokolliert.
+
+#### Rückblick
+
+**Entwurf:**
+Das Artefakt SecurityImplementation erfüllt das Handlungsziel 4, sicherheitsrelevante Aspekte bei Entwurf, Implementierung und Inbetriebnahme zu berücksichtigen, auf mehrere Arten im Entwurf:
+
+*Sicherer Umgang mit externen Bibliotheken*: Im Entwurf wird darauf hingewiesen, dass die Verwendung externer Bibliotheken Sicherheitslücken öffnen kann. Daher wird empfohlen, diese sorgfältig zu prüfen und sicherheitsrelevante Überlegungen zu berücksichtigen.
+
+*Ein- und Ausgabevalidierung*: Die Implementierung von Ein- und Ausgabevalidierung ist bereits im Entwurf verankert. Dies stellt sicher, dass Benutzereingaben auf Konsistenz und Sicherheit überprüft werden, um potenzielle Schwachstellen zu minimieren.
+
+**Implementierung:**
+Die Implementierung des Artefakts SecurityImplementation trägt weiterhin dazu bei, das Handlungsziel 4 zu erreichen:
+
+*Minimierung der Arbeit für Entwickler*: Die Struktur der Klasse fördert die Minimierung der Arbeit für Entwickler, indem klare Sicherheitsrichtlinien vorgegeben werden. Dadurch wird die Anwendung von Sicherheitspraktiken erleichtert und menschliche Fehler reduziert.
+
+*Überprüfung von Annahmen*: Die Klasse überprüft Annahmen bezüglich Benutzereingaben und Sicherheitsaspekte. Diese Überprüfung trägt dazu bei, mögliche Schwachstellen frühzeitig zu erkennen und zu verhindern.
+
+
+## Handlungsziel 5
+
+#### Artefakt
+```Csharp
+public class UserController : ControllerBase
+{
+    private readonly ILogger _logger;
+
+    public UserController(ILogger<UserController> logger)
+    {
+        _logger = logger;
+    }
+
+    public ActionResult PasswordUpdate(PasswordUpdateDto request)
+    {
+        //...
+        _logger.LogInformation("changing password of user {0}", user.Username);
+        //...
+    }
+}
+```
+```Csharp
+
+#### Nachweis zur Zielerreichung
 
 #### Erklärung
 
 #### Rückblick
+
+
+
+
+
+
+
+
 
 
 
