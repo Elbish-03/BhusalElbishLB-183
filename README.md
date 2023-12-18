@@ -23,12 +23,12 @@ Diese Artikel bieten detaillierte Einblicke in aktuelle Sicherheitsbedrohungen, 
 
 #### Erklärung
 
-Das erstellte Artefakt ist ein umfassender Sicherheitsbericht, der sich mit aktuellen Bedrohungen in Webanwendungen befasst. Der Bericht bietet detaillierte Analysen zu verschiedenen Sicherheitsaspekten, einschließlich Schwachstellen, Angriffsvektoren und möglichen Auswirkungen auf die Sicherheit von Webanwendungen. Die Erklärung beinhaltet eine umfassende Darstellung von Gegenmaßnahmen und präventiven Strategien, um die Identifizierung von Sicherheitslücken zu erleichtern und möglichen Bedrohungen effektiv entgegenzuwirken. Dieses Artefakt dient als wertvolle Ressource, um nicht nur Handlungsziel 2 (Sicherheitslücken erkennen und Gegenmaßnahmen vorschlagen) zu erfüllen, sondern auch einen ganzheitlichen Einblick in die Sicherheitslandschaft von Webanwendungen zu bieten.
+Das erstellte Artefakt ist ein umfassender Sicherheitsbericht, der sich mit aktuellen Bedrohungen in Webanwendungen befasst. Der Bericht bietet detaillierte Analysen zu verschiedenen Sicherheitsaspekten, einschliesslich Schwachstellen, Angriffsvektoren und möglichen Auswirkungen auf die Sicherheit von Webanwendungen. Die Erklärung beinhaltet eine umfassende Darstellung von Gegenmassnahmen und präventiven Strategien, um die Identifizierung von Sicherheitslücken zu erleichtern und möglichen Bedrohungen effektiv entgegenzuwirken. Dieses Artefakt dient als wertvolle Ressource, um nicht nur Handlungsziel 2 (Sicherheitslücken erkennen und Gegenmassnahmen vorschlagen) zu erfüllen, sondern auch einen ganzheitlichen Einblick in die Sicherheitslandschaft von Webanwendungen zu bieten.
 
 
 #### Rückblick
 
-Die Umsetzung des Sicherheitsberichts zu aktuellen Bedrohungen ist weitgehend erfolgreich, erfüllt das Handlungsziel der Erkennung von Sicherheitslücken und Gegenmaßnahmen. Positiv: gründliche Analyse, präzise Auswirkungsbeschreibung. Verbesserungspotenzial besteht in der Einbindung konkreter Fallstudien für mehr Praxisrelevanz. Zukünftige Optimierungen könnten interaktive Elemente wie Testszenarien einbeziehen, um eine praxisnahe Lernerfahrung zu bieten.
+Die Umsetzung des Sicherheitsberichts zu aktuellen Bedrohungen ist weitgehend erfolgreich, erfüllt das Handlungsziel der Erkennung von Sicherheitslücken und Gegenmassnahmen. Positiv: gründliche Analyse, präzise Auswirkungsbeschreibung. Verbesserungspotenzial besteht in der Einbindung konkreter Fallstudien für mehr Praxisrelevanz. Zukünftige Optimierungen könnten interaktive Elemente wie Testszenarien einbeziehen, um eine praxisnahe Lernerfahrung zu bieten.
 
 
 ## Handlungsziel 2
@@ -43,12 +43,12 @@ Verbesserter Code:
 
 #### Nachweis zur Zielerreichung
 
-Um das Handlungsziel "Sicherheitslücken und ihre Ursachen erkennen sowie Gegenmaßnahmen vorschlagen und implementieren können" zu erreichen, habe ich Sicherheitslücken im ursprünglichen Login-Controller-Code identifiziert und durch verbesserte Praktiken behoben. 
+Um das Handlungsziel "Sicherheitslücken und ihre Ursachen erkennen sowie Gegenmassnahmen vorschlagen und implementieren können" zu erreichen, habe ich Sicherheitslücken im ursprünglichen Login-Controller-Code identifiziert und durch verbesserte Praktiken behoben. 
 
 
 #### Erklärung
 
-In der ursprünglichen Implementierung des Login-Controllers gab es Sicherheitslücken, wie auf dem Bild dargestellt. Insbesondere waren Schwächen in der Überprüfung von Benutzeranmeldedaten, im Umgang mit Anti-CSRF-Maßnahmen und im Rate-Limiting vorhanden. Diese Schwachstellen wurden durch eine verbesserte Codebasis behoben, die im Folgenden präsentiert wird.
+In der ursprünglichen Implementierung des Login-Controllers gab es Sicherheitslücken, wie auf dem Bild dargestellt. Insbesondere waren Schwächen in der Überprüfung von Benutzeranmeldedaten, im Umgang mit Anti-CSRF-Massnahmen und im Rate-Limiting vorhanden. Diese Schwachstellen wurden durch eine verbesserte Codebasis behoben, die im Folgenden präsentiert wird.
 Verbesserungen:
 
 * Die Überprüfung auf gültige Benutzeranmeldedaten wurde präzisiert.
@@ -67,17 +67,38 @@ Für zusätzliche Sicherheit besteht die Möglichkeit, anstelle von MD5 einen si
 ## Handlungsziel 3
 
 #### Artefakt
+Die Erweiterung des NewsController um die [Authorize]-Attribute im GetAll-Action-Method.
+
+LoginController.cs
+![image](https://github.com/Elbish-03/BhusalElbishLB-183/assets/78097812/528c82cb-f21f-4e5e-8730-f7abca199935)
+
+NewsController.cs
+![image](https://github.com/Elbish-03/BhusalElbishLB-183/assets/78097812/3db3bb5b-00b6-45d0-9116-e85e26710fc3)
+
+#### Nachweis für Authentifizierung und Autorisierung im NewsController
+m Rahmen des Nachweises habe ich dem NewsController einen wesentlichen Sicherheitsaspekt hinzugefügt, indem ich den *Authorize*-Filter implementiert habe, wie im beigefügten Bild dokumentiert. 
+
+#### Erklärung
+Das eingeführte Artefakt im NewsController umfasst die Integration des *Authorize*-Attributs beim GetAll-Endpunkt. Durch diese Implementierung wird die Authentifizierung für den Zugriff auf die Liste aller Nachrichten erzwungen. Die Hinzufügung dieser Sicherheitsmaßnahme gewährleistet, dass nur authentifizierte Benutzer auf sensible Informationen zugreifen können, was zu einer insgesamt sichereren Anwendung führt.
+
+#### Rückblick
+
+Die Implementierung des *Authorize*-Filters im NewsController ist ein positiver Schritt für die Authentifizierung und Autorisierung. Dieser Filter gewährleistet, dass nur authentifizierte Benutzer auf die Methoden zugreifen können. Es wäre jedoch hilfreich, differenzierte Autorisierung und genauere Kontrolle über Benutzeraktionen in Betracht zu ziehen. Insgesamt bietet der aktuelle Ansatz eine solide Basis, die je nach spezifischen Sicherheitsanforderungen weiter optimiert werden kann.
+
+![image](https://github.com/Elbish-03/BhusalElbishLB-183/assets/78097812/0031484a-0977-432c-8bdb-ea3d627f1dc0)
+
+Die Integration differenzierter Autorisierung und genauer Kontrolle über Benutzeraktionen in den Code wäre äußerst hilfreich. Durch die Zuweisung granularer Berechtigungen an verschiedene Benutzergruppen kann eine präzise Steuerung des Zugriffs erreicht werden. 
+
+## Handlungsziel 4
+
+#### Artefakt
+![image](https://github.com/Elbish-03/BhusalElbishLB-183/assets/78097812/3dfa0d36-e198-4df2-be56-2e00fd2b5982)
 
 #### Nachweis zur Zielerreichung
 
 #### Erklärung
 
 #### Rückblick
-
-
-
-
-
 
 
 
