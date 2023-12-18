@@ -17,7 +17,7 @@ Um das Handlungsziel der Erkennung von Sicherheitslücken und deren Ursachen zu 
 
 Die folgenden Quellen repräsentieren einen Ausschnitt meiner Forschung:
 
-[Global State of the Internet Security - DDoS Attack Reports] (Akamai)](https://www.akamai.com/de/our-thinking/the-state-of-the-internet/global-state-of-the-internet-security-ddos-attack-reports)
-Cyber Bedrohungen H1 2021 Sicherheitsbericht (4net)(https://www.4net.ch/cyber-bedrohungen-h1-2021-sicherheitsbericht/)
+(https://www.akamai.com/de/our-thinking/the-state-of-the-internet/global-state-of-the-internet-security-ddos-attack-reports)
+(https://www.4net.ch/cyber-bedrohungen-h1-2021-sicherheitsbericht/)
 
 Diese Artikel bieten detaillierte Einblicke in aktuelle Sicherheitsbedrohungen, insbesondere im Hinblick auf DDoS-Angriffe und allgemeine Cyberbedrohungen. Durch das Studium dieser Quellen habe ich meine Fähigkeiten zur Identifizierung von Sicherheitslücken geschärft und ein fundiertes Verständnis für deren Ursachen entwickelt.
