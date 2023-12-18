@@ -79,7 +79,7 @@ NewsController.cs
 m Rahmen des Nachweises habe ich dem NewsController einen wesentlichen Sicherheitsaspekt hinzugefügt, indem ich den *Authorize*-Filter implementiert habe, wie im beigefügten Bild dokumentiert. 
 
 #### Erklärung
-Das eingeführte Artefakt im NewsController umfasst die Integration des *Authorize*-Attributs beim GetAll-Endpunkt. Durch diese Implementierung wird die Authentifizierung für den Zugriff auf die Liste aller Nachrichten erzwungen. Die Hinzufügung dieser Sicherheitsmaßnahme gewährleistet, dass nur authentifizierte Benutzer auf sensible Informationen zugreifen können, was zu einer insgesamt sichereren Anwendung führt.
+Das eingeführte Artefakt im NewsController umfasst die Integration des *Authorize*-Attributs beim GetAll-Endpunkt. Durch diese Implementierung wird die Authentifizierung für den Zugriff auf die Liste aller Nachrichten erzwungen. Die Hinzufügung dieser Sicherheitsmassnahme gewährleistet, dass nur authentifizierte Benutzer auf sensible Informationen zugreifen können, was zu einer insgesamt sichereren Anwendung führt.
 
 #### Rückblick
 
@@ -87,7 +87,7 @@ Die Implementierung des *Authorize*-Filters im NewsController ist ein positiver 
 
 ![image](https://github.com/Elbish-03/BhusalElbishLB-183/assets/78097812/0031484a-0977-432c-8bdb-ea3d627f1dc0)
 
-Die Integration differenzierter Autorisierung und genauer Kontrolle über Benutzeraktionen in den Code wäre äußerst hilfreich. Durch die Zuweisung granularer Berechtigungen an verschiedene Benutzergruppen kann eine präzise Steuerung des Zugriffs erreicht werden. 
+Die Integration differenzierter Autorisierung und genauer Kontrolle über Benutzeraktionen in den Code wäre äusserst hilfreich. Durch die Zuweisung granularer Berechtigungen an verschiedene Benutzergruppen kann eine präzise Steuerung des Zugriffs erreicht werden. 
 
 ## Handlungsziel 4
 
@@ -156,14 +156,26 @@ public class UserController : ControllerBase
 
 #### Nachweis zur Zielerreichung
 
+Das Handlungsziel "Informationen für Auditing und Logging generieren. Auswertungen und Alarme definieren und implementieren" wurde erreicht, indem der Logger im UserController implementiert wurde. Der Logger (ILogger<UserController>) wurde verwendet, um Informationen über Passwortaktualisierungen zu protokollieren.
+
 #### Erklärung
+
+Durch die Einbindung des Loggers im Konstruktor des UserController konnte ich effektiv Logging-Funktionalitäten in der Anwendung integrieren. In der PasswordUpdate-Aktion habe ich den Logger genutzt, um wichtige Informationen, wie den Benutzernamen des betroffenen Benutzers, zu protokollieren. Diese einfache Implementierung schafft eine Grundlage für das Generieren von Audit-Informationen und das Protokollieren sicherheitsrelevanter Benutzeraktionen.
 
 #### Rückblick
 
+Die Umsetzung des Artefakts, bei dem der Logger im UserController für das Protokollieren von Passwortaktualisierungen verwendet wird, ist solide. Sie ermöglicht eine grundlegende Protokollierung sicherheitsrelevanter Benutzeraktionen. Jedoch fehlt es an spezifischen Auswertungen, Alarmdefinitionen und einer umfassenden Audit-Trail-Implementierung, wie sie im Handlungsziel gefordert werden.
 
 
+**Verbesserungsmöglichkeit: Alarmdefinitionen**
 
+Um das Handlungsziel vollständig zu erreichen, wäre es sinnvoll, klare Alarmdefinitionen und Reaktionen auf bestimmte sicherheitsrelevante Ereignisse zu implementieren. Dies könnte durch die Verwendung von ASP.NET Core Middleware erreicht werden, die auf Protokolleinträge reagiert und Alarme auslöst. 
 
+## Selbsteinschätzung des Erreichungsgrades der Kompetenz des Moduls
+
+Insgesamt denke ich, dass ich eine solide Grundlage für die behandelten Themen in diesem Modul aufgebaut habe. Ich habe ein gutes Verständnis für verschiedene Sicherheitslücken entwickelt und kann nun die grundlegenden Konzepte nachvollziehen, um Softwareanwendungen vor verschiedenen Bedrohungen zu schützen. Die praktischen Umsetzungen in den Handlungszielen haben mir geholfen, das Gelernte in die Praxis umzusetzen und weiter zu vertiefen.
+
+Leider konnte ich das letzte Handlungsziel nicht vollständig abschliessen, da ich gegen Ende des Moduls krank wurde. Trotzdem war mir klar, wie die Aufgabe zu lösen wäre, und ich konnte mein Wissen erfolgreich beim Abschlusstest anwenden. Ich fühle mich gut vorbereitet, die erworbenen Kenntnisse in realen Projekten anzuwenden und weiter zu vertiefen.
 
 
 
